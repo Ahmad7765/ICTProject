@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUCIT </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .light-mode {
+      background-color: white;
+      color: black;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .laptop {
+      display: flex;
+      justify-content: center;
+    }
+
+    .laptop-content {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      width: 80%;
+      max-width: 800px;
+      text-align: left;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode .laptop-content {
+      background-color: black;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .hero img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover; 
+      border-radius: 15px;  
+    }
+
+    .button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <div class="title">Explore FCIT Lahore</div>
+    <div class="laptop">
+      <div class="laptop-content">
+        <div class="navbar">
+          <button class="button" id="modeToggle">Switch to Light Mode</button>
+        </div>
+        <div class="hero">
+          <div>
+            <h1>Made By= Ahmad Pervaiz</h1>
+            <h3>Study at = PUCIT New Campus PU Lahore<br>Batch = F'24<br>
+            <h3>1)  FCIT New Campus<br> 2)  FCIT Old Campus</h3>
+            <button class="button">Login Page
+              <a href="login page.html">Click me </a><br>
+            </button>
+            <br><br>
+            <button class="button">image slide 
+              <a href="image slide.html">Click me </a><br></button>
+              <br><br>
+              <button class="button">Fcit Info 
+                <a href="Fcit info.html">Click me </a><br></button>
+              
+              
+                
+            </button>
+          </div>
+          <img src="https://cdn-education.tribune.com.pk/blogs/N2dzxa30AVrwXPAIY98JcgLMW9y1gmxu1m0MN9h9.jpeg" alt="Profile Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const body = document.body;
+    const toggleButton = document.getElementById('modeToggle');
+
+    toggleButton.addEventListener('click', () => {
+      if (body.classList.contains('dark-mode')) {
+        body.classList.replace('dark-mode', 'light-mode');
+        toggleButton.textContent = 'Switch to Dark Mode';
+      } else {
+        body.classList.replace('light-mode', 'dark-mode');
+        toggleButton.textContent = 'Switch to Light Mode';
+      }
+    });
+  </script>
+</body>
+</html>
